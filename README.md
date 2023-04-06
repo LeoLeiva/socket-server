@@ -67,11 +67,11 @@ Create some products with diferent denomination
 
 Run server socket
 ```python
-python server.py
+python socket/server.py
 ```
 
 Run client socket
 ```python
-python client.py
+python socket/client.py
 ```
 Put code of product
