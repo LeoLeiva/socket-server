@@ -72,6 +72,6 @@ python server.py
 
 Run client socket
 ```python
-python clint.py
+python client.py
 ```
 Put code of product
