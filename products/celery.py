@@ -1,13 +1,14 @@
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
-  
+from django.conf import settings
 
-os.environ.setdefault ('DJANGO_SETTINGS_MODULE', 'invertirenbolsa.settings')
-  
-app = Celery('products')
-  
-app.config_from_object('django.conf:settings', namespace='CELERY')
+
+os.environ.setdefault ('DJANGO_SETTINGS_MODULE', 'invertirenbolsa.config.settings.local')
+
+app = Celery('products', broker=settings.CELERY_BROKER_URL)
+
+app.config_from_object('django.conf:global_settings', namespace='CELERY')
 
 app.autodiscover_tasks()
 

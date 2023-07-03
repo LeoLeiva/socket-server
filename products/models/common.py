@@ -3,7 +3,6 @@ from decimal import Decimal
 import uuid
 
 from django.db import models
-from django.utils.translation import ugettext as _
 
 from .base import TimeStampedModel
 from products.constants import DenominationConstants
@@ -30,11 +29,11 @@ class Product(TimeStampedModel):
     )
     price_buy = models.DecimalField(
         max_digits=30, decimal_places=2,
-        verbose_name=_("Precio de compra"), default=0
+        verbose_name=("Precio de compra"), default=0
     )
     price_sell = models.DecimalField(
         max_digits=30, decimal_places=2,
-        verbose_name=_("Precio de venta"), default=0
+        verbose_name=("Precio de venta"), default=0
     )
     description = models.CharField(max_length=250, null=True)
     
