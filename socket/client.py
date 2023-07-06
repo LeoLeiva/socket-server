@@ -1,4 +1,6 @@
-import socket, sys, time
+import socket
+import sys
+import time
 
 
 def main():
@@ -35,6 +37,7 @@ def main():
             client.close()
             online = False
             break
+
 
 # start client
 main()

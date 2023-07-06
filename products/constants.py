@@ -1,6 +1,5 @@
 from decimal import Decimal
 
-
 TWOPLACES = Decimal(10) ** -2
 
 
